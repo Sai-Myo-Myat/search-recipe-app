@@ -3,18 +3,9 @@ import '../css/recipe.css'
  import { Link } from "react-router-dom";
 
 const Recipe = ({label, image, calories, mealType, ingredientLines}) => {
-    // const [facts, setFacts] = useState({});
-
-    // const showedRecipe = () => {
-    //     setFacts(
-    //        {label: {label}, image: {image}, calories: {calories}}
-    //     )
-    //     console.log(facts)
-    //     return <ShowedRecipe facts={facts}/>
-    // }
-
+    
     return (
-        <Link to='/showingRecipe'>
+        <Link to={`/show/${label}`}>
             <div className="recipe" >
                 <h2>{label}</h2>
                 <div className="imgContainer">

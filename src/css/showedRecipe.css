@@ -1,0 +1,33 @@
+.Recipe {
+  width: 80%;
+  margin: 5rem auto;
+  height: 50vh;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.infoContainer {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+h3 {
+  margin: 10px 0px;
+}
+
+.infoContainer img {
+  width: 40%;
+  height: 90%;
+  object-fit: fill;
+  border-radius: 50%;
+}
+
+.infoContainer .infos {
+  width: 50%;
+}
