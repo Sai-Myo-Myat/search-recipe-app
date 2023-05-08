@@ -21,10 +21,9 @@ h3 {
   margin: 10px 0px;
 }
 
-.infoContainer img {
-  width: 40%;
-  height: 90%;
-  object-fit: fill;
+.infoContainer .image {
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
 }
 

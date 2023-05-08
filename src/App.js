@@ -30,12 +30,17 @@ function App() {
   // `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`
 
   const fetchData = async () => {
-    const apiData = await fetch(
-      `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`
-    );
-    const Data = await apiData.json();
-    console.log(Data.hits);
-    setRecipes(Data.hits);
+    try {
+      const apiData = await fetch(
+        `https://api.edamam.com/search?q=${query ? query : "ice cream"}&app_id=${APP_ID}&app_key=${APP_KEY}`
+      );
+      const Data = await apiData.json();
+      console.log(Data.hits);
+      setRecipes(Data.hits);
+    } catch (error) {
+      setRecipes([])
+      console.log("fetching error, ", error)
+    }
   };
 
   return (

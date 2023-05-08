@@ -8,12 +8,9 @@ const ShowedRecipe = ({ recipes }) => {
   const { label } = useParams();
   const [Recipe, setRecipe] = useState({});
   useEffect(() => {
-    console.log("that is match", label);
     recipes.map((recipe) => {
       if (recipe.recipe.label === label) {
         setRecipe(recipe.recipe);
-        console.log(recipe.recipe);
-        console.log("used", Recipe);
       }
     });
   }, []);

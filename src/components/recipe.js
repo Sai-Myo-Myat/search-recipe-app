@@ -7,9 +7,11 @@ const Recipe = ({label, image, calories, mealType, ingredientLines}) => {
     return (
         <Link to={`/show/${label}`}>
             <div className="recipe" >
-                <h2>{label}</h2>
-                <div className="imgContainer">
-                    <img className="image" src={image} alt="" />
+                <h3>{label}</h3>
+                <div className="imgContainer image" style={{
+                    background: `url(${image})`,
+                    backgroundSize: "contain"
+                }}>
                 </div>
             </div>
         </Link>

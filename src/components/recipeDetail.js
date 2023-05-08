@@ -2,11 +2,17 @@ import React, { useEffect, useState } from "react";
 import "../css/showedRecipe.css";
 
 const RecipeDetail = ({ recipe }) => {
+  console.log(recipe.image, "this is recipe")
   return (
     <div className="Recipe">
       <h2>{recipe.label}</h2>
       <div className="infoContainer">
-        <img className="image" src={recipe.image} alt="" />
+        
+      <div className="image" style={{
+                    background: `url(${recipe.image}) no-repeat`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat"
+                }}> </div>
         <div className="infos">
           <h3>
             Dish Type: {recipe.dishType} ({recipe.mealType})

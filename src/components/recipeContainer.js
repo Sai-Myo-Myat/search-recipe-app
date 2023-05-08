@@ -2,12 +2,11 @@ import React from "react";
 import "../App.css";
 //importing components
 import Recipe from "./recipe";
-import ShowedRecipe from "./showRecipe";
 
 const RecipeContainer = ({ recipes }) => {
   return (
     <div className="recipeContainer">
-      {recipes.map((item) => {
+      {recipes.length > 0 ? recipes.map((item) => {
         return (
           <Recipe
             // label={item.recipe.label}
@@ -16,10 +15,10 @@ const RecipeContainer = ({ recipes }) => {
             ingredientLines={item.recipe.ingredientLines}
             label={item.recipe.label}
             image={item.recipe.image}
-            key={item.recipe.label}
+            key={item.recipe.image}
           />
         );
-      })}
+      }) : <h3 style={{paddingTop: "10px", color: "red"}}>There is no recipie. </h3>}
     </div>
   );
 };
