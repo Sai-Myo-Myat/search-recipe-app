@@ -16,7 +16,9 @@ a {
 }
 
 .recipe h3 {
-    color: white;
+    color: aliceblue;
+    width: 100%;
+    text-align: center;
 }
 
 .imgContainer {

@@ -8,15 +8,16 @@ const RecipeContainer = ({ recipes }) => {
     <div className="recipeContainer">
       {recipes.length > 0 ? recipes.map((item) => {
         return (
-          <Recipe
+          <div className="recipeWrapper" key={item.recipe.image}>
+            <Recipe
             // label={item.recipe.label}
             calories={item.recipe.calories}
             mealType={item.recipe.mealType}
             ingredientLines={item.recipe.ingredientLines}
             label={item.recipe.label}
             image={item.recipe.image}
-            key={item.recipe.image}
           />
+          </div>
         );
       }) : <h3 style={{paddingTop: "10px", color: "red"}}>There is no recipie. </h3>}
     </div>
